@@ -1,0 +1,83 @@
+/* 🔹 Estilos Generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔹 Navbar más delgado sin perder diseño */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #19171b;
+    border-bottom: 3px solid #ffc401;
+    padding: 0.5rem 0;  /* 🔥 Navbar más delgado sin perder diseño */
+    min-height: 50px;  /* 🔥 Define altura mínima */
+    display: flex;
+    align-items: center;  /* 🔥 Asegura alineación */
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔹 Ajuste para evitar que el contenido se oculte detrás del navbar */
+body {
+    padding-top: 60px; /* 🔥 Ajustado a la nueva altura del navbar */
+}
+
+/* 🔹 Logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    font-size: 1.2rem; /* 🔥 Tamaño óptimo del logo */
+    color: #fcc100;
+    margin: 0;
+}
+
+/* 🔹 Enlaces del menú */
+.nav-links .nav-item {
+    margin: 0 8px; /* 🔥 Espacio más compacto */
+}
+
+.nav-links .nav-link {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 0.9rem; /* 🔥 Tamaño de texto ligeramente menor */
+    padding: 0.3rem 0.8rem; /* 🔥 Reduce el padding */
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+
+/* 🔹 Efecto hover */
+.nav-links .nav-link:hover {
+    background-color: #9e8123;
+    color: #19171b;
+}
+
+/* 🔹 Iconos */
+.iconify {
+    color: #FFD700 !important;
+    font-size: 1rem; /* 🔥 Iconos más pequeños */
+    vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Menú Responsive */
+@media (max-width: 768px) {
+    .nav-links .nav-item {
+        margin: 3px 0;
+    }
+
+    .nav-links .nav-link {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

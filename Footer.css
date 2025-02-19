@@ -1,0 +1,123 @@
+/* Estilos generales del footer */
+#servicios {
+    background: linear-gradient(180deg, #1a1a1a, #000000); /* Degradado negro */
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Encabezado del footer */
+.footer-header h2 {
+    color: #ffffff; /* Blanco */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Diseño responsivo con grid */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Máximo 4 columnas */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    background: #222222; /* Gris oscuro */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.15); /* Sombra dorada */
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(255, 215, 0, 0.3);
+}
+
+.card img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 200px; /* Mantiene una altura fija */
+    object-fit: cover; /* Evita la distorsión y recorta la imagen manteniendo la proporción */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    border-top-left-radius: 12px; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 12px;
+    filter: grayscale(30%); /* Aplica un filtro de escala de grises del 30% */
+    transition: filter 0.3s ease; /* Suaviza el efecto al pasar el cursor */
+}
+
+.card img:hover {
+    filter: grayscale(0%); /* Elimina la escala de grises en hover */
+}
+
+
+/* Contenido de la tarjeta */
+.card-body {
+    padding: 4%;
+}
+
+.card-body h3 {
+    font-size: 1.4rem;
+    color: #FFD700; /* Dorado */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #dcdcdc; /* Gris claro */
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.footer-list li::before {
+    content: "•";
+    color: #FFD700; /* Puntos dorados */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilos del footer bottom */
+.footer-bottom {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #aaaaaa;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+
+    .footer-header h2 {
+        font-size: 2rem;
+    }
+}
